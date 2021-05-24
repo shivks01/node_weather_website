@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
             callback('Unable to find location.Please enter valid coordinates', undefined)
         }
         else {
-            callback(undefined, 'The weather condition is : ' + body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + " degrees out. It feels like " + body.current.feelslike + ' degrees though.')
+            callback(undefined, 'The weather condition is : ' + body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + " degrees out. It feels like " + body.current.feelslike + ' degrees though. The humidity is ' + body.current.humidity + '%.')
         }
     })
 }
